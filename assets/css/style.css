@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(85, 32, 32);
+    grid-template-columns: 20% auto;
+  gap: 20px;
+  grid-template-areas:
+    "navegacion header"
+    "navegacion productos"
+    "footer footer";
+}
+.navegacion{
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 1em;
+    background-color: darkblue;
+    color: aliceblue;
+    & li{
+        list-style: none;
+    }
+
+}
+.hambu-links{
+    display: none;
+}
+.header{
+    background-color: gainsboro;
+    text-align: center;
+    padding: .5em;
+    & input{
+        padding: .3em;
+    }
+}
