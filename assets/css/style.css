@@ -94,7 +94,7 @@ body {
 .footer{
   grid-area: footer;
   text-align: center;
-  background-color: darkblue;
+  background-color: rgb(11, 11, 84);
   padding: 1.5rem ;
   color: aliceblue;
   .redes{
@@ -112,11 +112,13 @@ body {
 }
 @media (min-width:576px) and (max-width: 991px){
   body {
-    grid-template-columns: 1fr auto;
+    display: grid;
+    grid-template-columns: 20% auto;
     grid-template-areas:
       'navegacion navegacion'
       'header productos'
       'footer footer';
+      gap: 0px;
   }
   .productos-seccion {
     grid-template-columns: 1fr 1fr;
@@ -133,25 +135,49 @@ body {
       background-color: aliceblue;
     }
     
-      div:nth-child(1){
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-      }
-      div:nth-child(5n){
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-      }
+    div:nth-child(1){
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+    div:nth-child(5n){
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+  }
+  .footer{
+    height: 12vh;
   }
   
 }
 @media (min-width: 992px){
   body {
+    display: grid;
     background-color: rgb(85, 32, 32);
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 20% auto;
     grid-template-areas:
       'navegacion header'
       'navegacion productos'
       'footer productos ';
+      gap: 0px;
+      height: 100vh;
+  }
+  .hambu-links {
+    display: block;
+  }
+  .navegacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    .logo{
+      padding: 1rem;
+    }
+    li{
+      padding: .6rem;
+    }
+  }
+  .hamburguesa i{
+    display: none;
   }
   .productos-seccion {
     grid-template-columns: 1fr 1fr 1fr;
@@ -176,6 +202,9 @@ body {
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
       }
+  }
+  .footer{
+    position: static;
   }
   
 }
