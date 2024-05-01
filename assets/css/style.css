@@ -1,39 +1,181 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: rgb(85, 32, 32);
-    grid-template-columns: 20% auto;
+body {
+  background-color: rgb(85, 32, 32);
+  grid-template-columns: 20% auto;
   gap: 20px;
   grid-template-areas:
     "navegacion header"
     "navegacion productos"
     "footer footer";
 }
-.navegacion{
-
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    align-items: center;
-    padding: 1em;
-    background-color: darkblue;
-    color: aliceblue;
-    & li{
-        list-style: none;
+.navegacion {
+  grid-area: navegacion;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 1em;
+  background-color: darkblue;
+  color: aliceblue;
+  & li {
+    list-style: none;
+  }
+}
+.hambu-links {
+  display: none;
+}
+.header {
+  grid-area: header;
+  background-color: gainsboro;
+  text-align: center;
+  padding: 0.5em;
+  & input {
+    padding: 0.3em;
+  }
+}
+.productos{
+  grid-area: productos;
+}
+.productos-seccion {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  row-gap: 3rem;
+ 
+}
+.paginacion{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: .5rem;
+  & div{
+    padding: .5rem;
+    border: 1px solid black;
+    background-color: aliceblue;
+  }
+  
+    div:nth-child(1){
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
     }
+    div:nth-child(5n){
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+}
 
-}
-.hambu-links{
-    display: none;
-}
-.header{
-    background-color: gainsboro;
+.card {
+  width: 100%;
+  height: 35vh;
+  background-color: black;
+  color: teal;
+  text-align: center;
+  border-radius: 10px;
+  align-items: center;
+  padding: 1rem;
+  align-content: center;
+  .descripcion-card{
     text-align: center;
-    padding: .5em;
-    & input{
-        padding: .3em;
+    & button{
+      background-color: brown;
+      padding: .5rem 3rem;
+      border: none;
+      border-radius: 20px;
+      margin-top: 1rem;
+
     }
+  }
+}
+.footer{
+  grid-area: footer;
+  text-align: center;
+  background-color: darkblue;
+  padding: 1.5rem ;
+  color: aliceblue;
+  .redes{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+
+    i {
+      font-size: 3rem;
+      border-radius: 5px;
+      padding-bottom: .5rem;
+    }
+  }
+}
+@media (min-width:576px) and (max-width: 991px){
+  body {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'navegacion navegacion'
+      'header productos'
+      'footer footer';
+  }
+  .productos-seccion {
+    grid-template-columns: 1fr 1fr;
+   
+  }
+  .paginacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: .5rem;
+    & div{
+      padding: .5rem;
+      border: 1px solid black;
+      background-color: aliceblue;
+    }
+    
+      div:nth-child(1){
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+      div:nth-child(5n){
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+  }
+  
+}
+@media (min-width: 992px){
+  body {
+    background-color: rgb(85, 32, 32);
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'navegacion header'
+      'navegacion productos'
+      'footer productos ';
+  }
+  .productos-seccion {
+    grid-template-columns: 1fr 1fr 1fr;
+   
+  }
+  .paginacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: .5rem;
+    & div{
+      padding: .5rem;
+      border: 1px solid black;
+      background-color: aliceblue;
+    }
+    
+      div:nth-child(1){
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+      div:nth-child(5n){
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+  }
+  
 }
