@@ -4,14 +4,13 @@
   box-sizing: border-box;
 }
 body {
-  background-color: rgba(156, 129, 162, 0.514);
-  grid-template-columns: 25% auto;
+  background-color: rgb(209, 127, 226);
+  grid-template-columns: 20% auto;
   gap: 20px;
   grid-template-areas:
     "navegacion header"
     "navegacion productos"
     "footer footer";
-    font-family: "Shadows Into Light", cursive;
 }
 .navegacion {
   grid-area: navegacion;
@@ -20,30 +19,22 @@ body {
   flex-wrap: nowrap;
   align-items: center;
   padding: 1em;
-  background-color:rgb(227, 207, 237);
-  color: rgb(85, 12, 169);
+  background-color: darkblue;
+  color: aliceblue;
   & li {
     list-style: none;
   }
-  .fa-fan:before {
-    content: "\f863";
-    font-size: xxx-large;
-}
 }
 .hambu-links {
   display: none;
-  i{
-    height: 2rem;
-  }
 }
 .header {
   grid-area: header;
-  background-color: rgb(227, 207, 237);
+  background-color: gainsboro;
   text-align: center;
-  padding: 0.3em;
+  padding: 0.5em;
   & input {
     padding: 0.3em;
-    border-radius: 4px;
   }
 }
 .productos{
@@ -80,7 +71,7 @@ body {
 
 .card {
   width: 100%;
-  height: 35vh;
+  height: 45vh;
   background-color: rgb(255, 255, 255);
   color: teal;
   text-align: center;
@@ -93,14 +84,12 @@ body {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     margin-top: -1px;
+    padding-bottom: 1rem;
   }
   .descripcion-card{
     text-align: center;
-    margin-bottom: 1rem;
     & button{
-      background-color: rgba(85, 12, 169, 0.443);
-      color: rgb(85, 12, 169);
-      font-weight: bolder;
+      background-color: brown;
       padding: .5rem 3rem;
       border: none;
       border-radius: 20px;
@@ -131,20 +120,16 @@ body {
 @media (min-width:576px) and (max-width: 991px){
   body {
     display: grid;
-    grid-template-columns: 25% auto;
+    grid-template-columns: 20% auto;
     grid-template-areas:
       'navegacion navegacion'
       'header productos'
       'footer footer';
       gap: 0px;
   }
-  .header{
-    border-top: 2px dotted rgb(197, 84, 254);
-  }
   .header input {
-    width: 20vw;
+    width: 15vw;
     margin-top: .5rem;
-    box-sizing: content-box;
 }
   .productos-seccion {
     grid-template-columns: 1fr 1fr;
@@ -178,7 +163,7 @@ body {
 @media (min-width: 992px){
   body {
     display: grid;
-    background-color:  rgb(197, 84, 254);
+    background-color: rgb(85, 32, 32);
     grid-template-columns: 20% auto;
     grid-template-areas:
       'navegacion header'
