@@ -84,7 +84,7 @@ padding-bottom: 2rem;
       border-top-left-radius: 15px;
       border-bottom-left-radius: 15px;
     }
-    div:nth-child(5n){
+    div:nth-child(5){
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
     }
