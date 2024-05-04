@@ -25,15 +25,15 @@ body {
   & li {
     list-style: none;
   }
-  .fa-fan:before {
-    content: "\f863";
-    font-size: xxx-large;
-  }
 }
 .logo{
   text-align: center;
   display: flex;
   align-items: center;
+  .fa-fan:before {
+    content: "\f863";
+    font-size: xxx-large;
+  }
   p{
     padding-left: .5rem;
   }
@@ -44,6 +44,7 @@ body {
     height: 2rem;
   }
 }
+
 .header {
   grid-area: header;
   background-color: rgb(227, 207, 237);
