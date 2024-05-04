@@ -16,11 +16,11 @@
   <body>
     <nav class="navegacion">
       <div class="logo">
-        <p><i class="fas fa-fan fa-spin" style="color: #4f19b3;"></i> Flowers Store</p>
+        <i class="fas fa-fan fa-spin" style="color: #4f19b3;"></i><p> Flowers Store</p>
       </div>
       <div class="hamburguesa">
         <div>
-          <i class="fas fa-bars fa-spin"></i>
+          <i class="fas fa-bars"></i>
         </div>
         <div class="hambu-links">
           <ul>
@@ -34,12 +34,12 @@
     </nav>
     <header class="header">
       <p>Ordenar Por:</p>
-      <input
-        type="text"
-        name="ordenarPor"
-        id="ordenarPor"
-        placeholder="Precio                          v"
-      />
+      <select name="ordenarPor"  id="ordenarPor">
+        <option value="value1" selected>Precio</option>
+        <option value="value2">Interior</option>
+        <option value="value3">Exterior</option>
+      </select>
+  
     </header>
 
     <main class="productos">
@@ -64,7 +64,7 @@
         </div> 
         <div class="card">
           <div>
-            <img src="./assets/img/tulip-8720207_1280.webp" alt="producto 3">
+            <img src="./assets/img/tulips-2254970_640.jpg" alt="producto 3">
           </div>
           <div class="descripcion-card">
             <p>Producto 3</p>
@@ -73,7 +73,7 @@
         </div> 
         <div class="card">
           <div>
-            <img src="" alt="producto 4">
+            <img src="./assets/img/sunflowers-4298808_640.jpg" alt="producto 4">
           </div>
           <div class="descripcion-card">
             <p>Producto 4</p>
@@ -82,7 +82,7 @@
         </div> 
         <div class="card">
           <div>
-            <img src="" alt="producto 5">
+            <img src="./assets/img/" alt="producto 5">
           </div>
           <div class="descripcion-card">
             <p>Producto 5</p>
@@ -100,18 +100,18 @@
       </div>
     </div>
       <div class="paginacion">
-        <div> ||</div>
+        <div> << </div>
         <div> 1 </div>
         <div> 2 </div>
         <div> 3 </div>
-        <div> || </div>
+        <div> >> </div>
       </div>
     </main>
     <footer class="footer">
       <div class="redes">
 
-        <div><i class="fab fa-facebook-square" style="color: #38a0f0;"></i></div>
-        <div><i class="fab fa-instagram-square" style="color: #b05470;"></i></div>
+        <div><i class="fab fa-facebook-square" style="color:  rgb(85, 12, 169);"></i></div>
+        <div><i class="fab fa-instagram-square" style="color:  rgb(85, 12, 169);"></i></div>
       </div>
       <p>Todos los derechas reservados</p>
     </footer>

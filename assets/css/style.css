@@ -28,7 +28,15 @@ body {
   .fa-fan:before {
     content: "\f863";
     font-size: xxx-large;
+  }
 }
+.logo{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  p{
+    padding-left: .5rem;
+  }
 }
 .hambu-links {
   display: none;
@@ -42,9 +50,10 @@ body {
   text-align: center;
   padding: 0.3em;
 padding-bottom: 2rem;
-  & input {
+  & select {
     padding: 0.3em;
     border-radius: 4px;
+    width: 80vw;
   }
 }
 .productos{
@@ -64,9 +73,10 @@ padding-bottom: 2rem;
   flex-direction: row;
   justify-content: center;
   padding: .5rem;
+  color:  rgb(85, 12, 169);
   & div{
     padding: .5rem;
-    border: 1px solid black;
+    border: 1px solid rgb(85, 12, 169);
     background-color: aliceblue;
   }
   
@@ -114,10 +124,10 @@ padding-bottom: 2rem;
 .footer{
   grid-area: footer;
   text-align: center;
-  background-color:  rgba(156, 129, 162, 0);
+  background-color: rgb(227, 207, 237);
   padding: 1.5rem ;
-  color: aliceblue;
-
+  color: rgb(85, 12, 169);
+  box-sizing: content-box;
   .redes{
     display: flex;
     align-items: stretch;
@@ -141,7 +151,7 @@ padding-bottom: 2rem;
       'footer footer';
       gap: 0px;
   }
-  .hamburguesa{
+  .hamburguesa {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -150,20 +160,27 @@ padding-bottom: 2rem;
     }
     .hambu-links {
       display: flex;
-      & ul > li{
+      & ul{ 
         display: flex;
+        gap: 1rem;
+        align-content: flex-end;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
       }
       
     }
   }
+
   .header{
     border-top: 2px dotted rgb(197, 84, 254);
+    padding-top: 1rem;
   }
-  .header input {
+  .header select {
     width: 20vw;
     margin-top: .5rem;
-    box-sizing: content-box;
-}
+  
+  }
   .productos-seccion {
     grid-template-columns: 1fr 1fr;
    
@@ -175,10 +192,8 @@ padding-bottom: 2rem;
     padding-bottom: 1.5rem;
     & div{
       padding: .5rem;
-      border: 1px solid black;
-      background-color: aliceblue;
+  
     }
-    
     div:nth-child(1){
       border-top-left-radius: 15px;
       border-bottom-left-radius: 15px;
@@ -190,13 +205,13 @@ padding-bottom: 2rem;
   }
   .footer{
     height: 12vh;
+    background-color:  rgb(227, 207, 237);
   }
   
 }
 @media (min-width: 992px){
   body {
     display: grid;
- background-color: rgba(156, 129, 162, 0.514);
     grid-template-columns: 20% auto;
     grid-template-areas:
       'navegacion header'
@@ -223,6 +238,12 @@ padding-bottom: 2rem;
   .hamburguesa i{
     display: none;
   }
+  .header select {
+    width: 75vw;
+    margin-top: .5rem;
+    box-sizing: border-box;
+  
+  }
   .productos-seccion {
     grid-template-columns: 1fr 1fr 1fr;
    
@@ -230,8 +251,6 @@ padding-bottom: 2rem;
   .paginacion{
     & div{
       padding: .5rem;
-      border: 1px solid black;
-      background-color: aliceblue;
     }
     
       div:nth-child(1){
