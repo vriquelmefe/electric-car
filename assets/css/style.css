@@ -22,6 +22,7 @@ body {
   padding: 1em;
   background-color:rgb(227, 207, 237);
   color: rgb(85, 12, 169);
+  box-shadow: 4px 4px 15px rgba(85, 12, 169, 0.443);
   & li {
     list-style: none;
   }
@@ -51,6 +52,8 @@ body {
   text-align: center;
   padding: 0.3em;
 padding-bottom: 2rem;
+box-shadow: 4px 4px 15px rgba(85, 12, 169, 0.443);
+
   & select {
     padding: 0.3em;
     border-radius: 4px;
@@ -102,6 +105,7 @@ padding-bottom: 2rem;
   align-content: baseline;
   box-sizing: border-box;
   margin: 0;
+  box-shadow: 4px 4px 15px rgba(85, 12, 169, 0.443);
   div > img{
     width: 100%;
     border-top-left-radius: 10px;
@@ -249,7 +253,7 @@ padding-bottom: 2rem;
   
   }
   .productos-seccion {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
    
   }
   .paginacion{
@@ -278,7 +282,7 @@ padding-bottom: 2rem;
 @media (min-width: 1261px) {
 
  .productos-seccion {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
    
   }
   .hamburguesa i{
